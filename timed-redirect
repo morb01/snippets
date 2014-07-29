@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!--Pleace this snippet right after opening the head tag to make it work properly-->
+<!--REDIRECTING STARTS-->
+<link rel="canonical" href="index.html"/>
+<noscript>
+<meta http-equiv="refresh" content="5;URL=index.html">
+</noscript>
+<script type="text/javascript">
+var url = "index.html";
+var delay = "5000";
+
+window.onload = function ()
+{
+    DoTheRedirect()
+}
+function DoTheRedirect()
+{
+    setTimeout(GoToURL, delay)
+}
+function GoToURL()
+{
+    // IE8 and lower fix
+    if (navigator.userAgent.match(/MSIE\s(?!9.0)/))
+    {
+        var referLink = document.createElement("a");
+        referLink.href = url;
+        document.body.appendChild(referLink);
+        referLink.click();
+    }
+
+    // All other browsers
+    else { window.location.replace(url); }
+}
+</script>
+<!--REDIRECTING ENDS-->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+</body>
+</html>
